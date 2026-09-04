@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "updated_at": "2026-09-04T15:30:00+08:00",
+  "version": 9,
+  "updated_at": "2026-09-04T15:50:00+08:00",
   "school": "新生醫護管理專科學校",
   "semester": "115學年度第1學期",
   "class_name": "五專護理403班（原住民專班）",
@@ -25,11 +25,10 @@
     "8": {"start": "15:45", "end": "16:35"}
   },
   "fixed_schedule": [
-    {"weekday": 1, "start_period": 2, "end_period": 2, "course": "其他", "teacher": "", "room": "", "type": "other"},
-    {"weekday": 1, "start_period": 7, "end_period": 8, "course": "其他", "teacher": "", "room": "", "type": "other"},
     {"weekday": 2, "start_period": 1, "end_period": 2, "course": "護理倫理與法律", "teacher": "陳鳳音", "room": "", "type": "ethics"},
     {"weekday": 2, "start_period": 3, "end_period": 3, "course": "體育（七）", "teacher": "施瑩悌", "room": "", "type": "pe"},
     {"weekday": 2, "start_period": 5, "end_period": 6, "course": "精神科護理學", "teacher": "張銀玲", "room": "", "type": "psych"},
+    {"weekday": 2, "start_period": 7, "end_period": 8, "course": "其他", "teacher": "", "room": "", "type": "other"},
     {"weekday": 4, "start_period": 1, "end_period": 1, "course": "精神科護理學", "teacher": "張銀玲", "room": "", "type": "psych"},
     {"weekday": 4, "start_period": 2, "end_period": 2, "course": "兒科護理學進階", "teacher": "林素雯", "room": "", "type": "peds"},
     {"weekday": 4, "start_period": 3, "end_period": 4, "course": "兒科護理學實驗", "teacher": "林素雯", "room": "兒科示範教室", "type": "lab"},
@@ -65,5 +64,5 @@
     "16": {"title": "放假提醒", "text": "1/1元旦放假。"},
     "18": {"title": "期末考週", "text": "考試科目、時間與教室依學校最新公告。"}
   },
-  "notice": "星期一第2、7、8節為「其他」；星期五第1、2節為「通識課程」。調課、補課、考試與教室異動，以班群及任課教師最新公告為準。"
+  "notice": "星期一全天無固定課程；星期二第7、8節為「其他」；星期五第1、2節為「通識課程」。調課、補課、考試與教室異動，以班群及任課教師最新公告為準。"
 }
