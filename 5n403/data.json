@@ -1,0 +1,54 @@
+{
+  "version": 7,
+  "updated_at": "2026-09-04T15:25:00+08:00",
+  "school": "新生醫護管理專科學校",
+  "semester": "115學年度第1學期",
+  "class_name": "五專護理403班（原住民專班）",
+  "short_name": "5N403",
+  "slogan": "終於變高年級",
+  "term_start": "2026-09-14",
+  "term_end": "2027-01-15",
+  "week_count": 18,
+  "internship": {
+    "start": "2026-10-05",
+    "end": "2026-10-25",
+    "title": "校外實習（不在校）"
+  },
+  "periods": {
+    "1": {"start": "08:10", "end": "09:00"},
+    "2": {"start": "09:10", "end": "10:00"},
+    "3": {"start": "10:10", "end": "11:00"},
+    "4": {"start": "11:10", "end": "12:00"},
+    "5": {"start": "12:50", "end": "13:40"},
+    "6": {"start": "13:45", "end": "14:35"},
+    "7": {"start": "14:50", "end": "15:40"},
+    "8": {"start": "15:45", "end": "16:35"}
+  },
+  "fixed_schedule": [
+    {"weekday": 2, "start_period": 1, "end_period": 2, "course": "護理倫理與法律", "teacher": "陳鳳音", "room": "", "type": "ethics"},
+    {"weekday": 2, "start_period": 3, "end_period": 3, "course": "體育（七）", "teacher": "施瑩悌", "room": "", "type": "pe"},
+    {"weekday": 2, "start_period": 5, "end_period": 6, "course": "精神科護理學", "teacher": "張銀玲", "room": "", "type": "psych"},
+    {"weekday": 2, "start_period": 7, "end_period": 8, "course": "其他", "teacher": "", "room": "", "type": "other"},
+    {"weekday": 4, "start_period": 1, "end_period": 1, "course": "精神科護理學", "teacher": "張銀玲", "room": "", "type": "psych"},
+    {"weekday": 4, "start_period": 2, "end_period": 2, "course": "兒科護理學進階", "teacher": "林素雯", "room": "", "type": "peds"},
+    {"weekday": 4, "start_period": 3, "end_period": 4, "course": "兒科護理學實驗", "teacher": "林素雯", "room": "兒科示範教室", "type": "lab"},
+    {"weekday": 5, "start_period": 1, "end_period": 2, "course": "通識課程", "teacher": "", "room": "", "type": "general"},
+    {"weekday": 5, "start_period": 3, "end_period": 4, "course": "內外科護理學進階", "teacher": "王淑真", "room": "", "type": "medsurg"},
+    {"weekday": 5, "start_period": 5, "end_period": 6, "course": "原住民健康促進", "teacher": "楊金蘭", "room": "", "type": "indigenous"},
+    {"weekday": 5, "start_period": 7, "end_period": 8, "course": "社區護理學進階", "teacher": "李淑惠", "room": "", "type": "community"}
+  ],
+  "special_events": [
+    {"date": "2026-09-14", "all_day": true, "kind": "activity", "title": "註冊日", "note": "依學校十八週課表"},
+    {"date": "2026-09-14", "start_period": 5, "end_period": 6, "kind": "makeup", "title": "內外科護理學進階", "teacher": "王淑真", "room": "", "note": "補課"},
+    {"date": "2026-09-25", "all_day": true, "kind": "holiday", "title": "中秋節放假", "note": "依學校十八週課表"},
+    {"date": "2026-09-28", "all_day": true, "kind": "holiday", "title": "教師節放假", "note": "依學校十八週課表"},
+    {"date": "2026-10-09", "all_day": true, "kind": "holiday", "title": "國慶日補假", "note": "依學校十八週課表"},
+    {"date": "2026-10-26", "all_day": true, "kind": "holiday", "title": "光復節放假", "note": "依學校十八週課表"},
+    {"date": "2026-11-09", "all_day": true, "kind": "exam", "title": "期中考週開始", "note": "第9週"},
+    {"date": "2026-11-23", "all_day": true, "kind": "holiday", "title": "校慶日補假", "note": "依學校十八週課表"},
+    {"date": "2026-12-25", "all_day": true, "kind": "holiday", "title": "行憲紀念日放假", "note": "依學校十八週課表"},
+    {"date": "2027-01-01", "all_day": true, "kind": "holiday", "title": "元旦放假", "note": "依學校十八週課表"},
+    {"date": "2027-01-11", "all_day": true, "kind": "exam", "title": "期末考週開始", "note": "第18週"}
+  ],
+  "notice": "調課、補課、考試與教室異動，以班群及任課教師最新公告為準。"
+}
