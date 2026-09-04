@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f5f5a">
+  <meta name="description" content="新生醫護管理專科學校 115學年度第1學期 五專護理403班課表">
+  <title>5N403｜115-1 班級課表</title>
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="school">新生醫護管理專科學校</div>
+        <h1>5N403 <span class="heart">♥</span>《終於變高年級 <span class="rocket">🚀</span>》</h1>
+        <p class="subtitle">115學年度第1學期｜五專護理403班（原住民專班）</p>
+      </div>
+      <div class="hero-badges" aria-label="課表摘要">
+        <span class="hero-badge">2026/9/14－2027/1/15</span>
+        <span class="hero-badge">10/5－10/25 校外實習</span>
+        <span class="hero-badge admin hidden" id="adminBadge">學藝管理模式</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <nav class="toolbar" aria-label="課表檢視選單">
+      <div class="tabs" id="tabs"></div>
+      <div class="actions">
+        <button class="btn" id="shareViewBtn">分享目前頁面</button>
+        <button class="btn" id="printBtn">列印／存PDF</button>
+        <button class="btn accent hidden" id="publishBtn">發布班群連結</button>
+      </div>
+    </nav>
+
+    <div class="admin-banner hidden" id="adminBanner">
+      <div class="info-icon">i</div>
+      <div><strong>學藝操作區</strong><br>異動會先儲存在目前裝置。完成後按「發布班群連結」，再把新連結貼到班群；同學開啟新連結後，才會看到最新版本。</div>
+    </div>
+
+    <section class="panel active" id="panel-week">
+      <div class="section-head">
+        <div><div class="eyebrow">Weekly schedule</div><h2>週課表</h2><p>自動帶入週次、日期、校外實習、放假與學藝登錄的最新異動。</p></div>
+        <span class="pill" id="weekStatus">第1週</span>
+      </div>
+      <div class="week-controller">
+        <button id="prevWeek" aria-label="上一週">← 上一週</button>
+        <div class="week-center"><strong id="weekTitle">第1週</strong><span id="weekRange">9/14－9/18</span><select class="week-select" id="weekSelect" aria-label="選擇週次"></select></div>
+        <button id="nextWeek" aria-label="下一週">下一週 →</button>
+      </div>
+      <div class="notice hidden" id="weekNotice"><div class="info-icon">i</div><div><strong id="noticeTitle"></strong><span id="noticeText"></span></div></div>
+      <div class="days-grid" id="weeklyGrid"></div>
+    </section>
+
+    <section class="panel" id="panel-changes">
+      <div class="section-head">
+        <div><div class="eyebrow">Academic officer</div><h2>異動管理</h2><p>新增、修改或刪除停課、調課、補課、活動、考試與臨時教室異動。</p></div>
+        <span class="pill" id="changeCount">0筆異動</span>
+      </div>
+      <div class="manage-head">
+        <div class="manage-actions">
+          <button class="btn primary" id="addChangeBtn">＋ 新增異動</button>
+          <button class="btn" id="backupBtn">匯出備份</button>
+          <button class="btn" id="importBtn">匯入備份</button>
+          <input type="file" id="importFile" accept="application/json,.json" class="hidden">
+        </div>
+        <button class="btn danger" id="resetBtn">恢復原始課表</button>
+      </div>
+      <div class="record-list" id="changeList"></div>
+    </section>
+
+    <section class="panel" id="panel-fixed">
+      <div class="section-head">
+        <div><div class="eyebrow">Regular schedule</div><h2>固定課表</h2><p id="fixedDescription">一般上課週使用；臨時調課、補課或考試以週課表顯示為準。</p></div>
+        <span class="pill">固定課程</span>
+      </div>
+      <div class="fixed-admin-grid" id="fixedGrid"></div>
+    </section>
+
+    <section class="panel" id="panel-semester">
+      <div class="section-head">
+        <div><div class="eyebrow">18 weeks</div><h2>18週行事</h2><p>快速查看實習、考試與放假週，不必滑到手指先畢業。</p></div>
+        <span class="pill">共18週</span>
+      </div>
+      <div class="overview" id="semesterGrid"></div>
+      <div class="legend"><span><i class="dot" style="background:#4594c7"></i>校外實習</span><span><i class="dot" style="background:#f3c85b"></i>放假／活動</span><span><i class="dot" style="background:#9a63b0"></i>考試週</span></div>
+    </section>
+
+    <div class="footer-note"><div class="info-icon">i</div><div><strong>課表提醒</strong><br>星期二第7、8節為「其他」；星期五第1、2節為「通識課程」。10/5－10/25為校外實習期間；臨時異動以學藝發布的最新班群連結為準。</div></div>
+    <footer id="footerText">5N403班級課表</footer>
+  </main>
+
+  <div class="modal-backdrop hidden" id="changeModal" role="dialog" aria-modal="true" aria-labelledby="changeModalTitle">
+    <div class="modal">
+      <div class="modal-head"><div><h2 id="changeModalTitle">新增異動</h2><p>同一天同一節建議只保留一筆，以免課表自己跟自己吵架。</p></div><button class="close" data-close="changeModal" aria-label="關閉">×</button></div>
+      <form id="changeForm">
+        <input type="hidden" id="changeId">
+        <div class="form-grid">
+          <div class="field"><label for="changeDate">日期</label><input type="date" id="changeDate" min="2026-09-14" max="2027-01-15" required></div>
+          <div class="field"><label for="changeType">異動類型</label><select id="changeType" required><option value="停課">停課</option><option value="調課">調課</option><option value="補課">補課</option><option value="活動">活動</option><option value="考試">考試</option><option value="放假">放假</option></select></div>
+          <div class="field"><label for="changeStart">開始節次</label><select id="changeStart" required><option value="all">全天</option><option value="1">第1節</option><option value="2">第2節</option><option value="3">第3節</option><option value="4">第4節</option><option value="5">第5節</option><option value="6">第6節</option><option value="7">第7節</option><option value="8">第8節</option></select></div>
+          <div class="field"><label for="changeEnd">結束節次</label><select id="changeEnd" required><option value="all">全天</option><option value="1">第1節</option><option value="2">第2節</option><option value="3">第3節</option><option value="4">第4節</option><option value="5">第5節</option><option value="6">第6節</option><option value="7">第7節</option><option value="8">第8節</option></select></div>
+          <div class="field full"><label for="changeTitle">課程／活動名稱</label><input type="text" id="changeTitle" maxlength="50" placeholder="例如：內外科護理學進階、班會、停課" required></div>
+          <div class="field"><label for="changeTeacher">教師</label><input type="text" id="changeTeacher" maxlength="30" placeholder="可留白"></div>
+          <div class="field"><label for="changeRoom">教室</label><input type="text" id="changeRoom" maxlength="40" placeholder="可留白"></div>
+          <div class="field full"><label for="changeNote">備註</label><textarea id="changeNote" maxlength="120" placeholder="例如：原第3、4節調至此時段"></textarea></div>
+        </div>
+        <div class="form-footer"><button type="button" class="btn" data-close="changeModal">取消</button><button type="submit" class="btn primary">儲存異動</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="fixedModal" role="dialog" aria-modal="true" aria-labelledby="fixedModalTitle">
+    <div class="modal">
+      <div class="modal-head"><div><h2 id="fixedModalTitle">新增固定課程</h2><p>只修改整學期固定出現的課程；單次異動請到「異動管理」。</p></div><button class="close" data-close="fixedModal" aria-label="關閉">×</button></div>
+      <form id="fixedForm">
+        <input type="hidden" id="fixedId"><input type="hidden" id="fixedDay">
+        <div class="form-grid">
+          <div class="field"><label for="fixedDaySelect">星期</label><select id="fixedDaySelect" required><option value="0">星期一</option><option value="1">星期二</option><option value="2">星期三</option><option value="3">星期四</option><option value="4">星期五</option></select></div>
+          <div class="field"><label for="fixedTitle">課程名稱</label><input type="text" id="fixedTitle" maxlength="50" required></div>
+          <div class="field"><label for="fixedStart">開始節次</label><select id="fixedStart" required><option value="1">第1節</option><option value="2">第2節</option><option value="3">第3節</option><option value="4">第4節</option><option value="5">第5節</option><option value="6">第6節</option><option value="7">第7節</option><option value="8">第8節</option></select></div>
+          <div class="field"><label for="fixedEnd">結束節次</label><select id="fixedEnd" required><option value="1">第1節</option><option value="2">第2節</option><option value="3">第3節</option><option value="4">第4節</option><option value="5">第5節</option><option value="6">第6節</option><option value="7">第7節</option><option value="8">第8節</option></select></div>
+          <div class="field"><label for="fixedTeacher">教師</label><input type="text" id="fixedTeacher" maxlength="30" placeholder="可留白"></div>
+          <div class="field"><label for="fixedRoom">教室</label><input type="text" id="fixedRoom" maxlength="40" placeholder="可留白"></div>
+        </div>
+        <div class="form-footer"><button type="button" class="btn" data-close="fixedModal">取消</button><button type="submit" class="btn primary">儲存課程</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">已完成</div>
+  <script src="core.js?v=8"></script>
+  <script src="schedule.js?v=8"></script>
+</body>
+</html>
