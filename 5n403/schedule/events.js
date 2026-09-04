@@ -31,3 +31,4 @@
     $('resetBtn').addEventListener('click',()=>{if(confirm('確定恢復原始課表？自行新增的固定課與異動都會清除。')){state=defaultState();save();toast('已恢復原始課表')}});
 
     renderAll();
+    const footerNote=document.querySelector('.footer-note div:last-child');if(footerNote)footerNote.innerHTML='<strong>課表提醒</strong><br>星期一第2、7、8節為「其他」；星期五第1、2節為「通識課程」。10/5－10/25為校外實習期間；臨時異動以學藝發布的最新班群連結為準。';
