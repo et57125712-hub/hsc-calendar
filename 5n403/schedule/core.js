@@ -12,7 +12,7 @@
     const colors={'其他':'#718096','護理倫理與法律':'#7554b7','體育（七）':'#3d995c','精神科護理學':'#3d7ec0','兒科護理學進階':'#d06d38','兒科護理學實驗':'#c45b56','通識課程':'#b78312','內外科護理學進階':'#2b837b','原住民健康促進':'#b67911','社區護理學進階':'#b34d83','停課':'#9c5b55','調課':'#7a58a5','補課':'#2b837b','活動':'#af7b18','考試':'#774e91','放假':'#b94e47'};
 
     const defaultFixed=[
-      [{id:'f-m-78',start:7,end:8,title:'其他',teacher:'',room:''}],
+      [{id:'f-m-2',start:2,end:2,title:'其他',teacher:'',room:''},{id:'f-m-78',start:7,end:8,title:'其他',teacher:'',room:''}],
       [{id:'f-tu-12',start:1,end:2,title:'護理倫理與法律',teacher:'陳鳳音',room:''},{id:'f-tu-3',start:3,end:3,title:'體育（七）',teacher:'施瑩悌',room:''},{id:'f-tu-56',start:5,end:6,title:'精神科護理學',teacher:'張銀玲',room:''}],
       [],
       [{id:'f-th-1',start:1,end:1,title:'精神科護理學',teacher:'張銀玲',room:''},{id:'f-th-2',start:2,end:2,title:'兒科護理學進階',teacher:'林素雯',room:''},{id:'f-th-34',start:3,end:4,title:'兒科護理學實驗',teacher:'林素雯',room:'兒科示範教室'}],
