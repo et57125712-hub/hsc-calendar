@@ -1,0 +1,1 @@
+(()=>{const files=['core.js','schedule.js','manage.js','events.js'];let i=0;const next=()=>{if(i>=files.length)return;const s=document.createElement('script');s.src=files[i++];s.onload=next;s.onerror=()=>console.error('無法載入課表程式：'+s.src);document.head.appendChild(s)};next()})();
