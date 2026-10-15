@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HSC//AI Teacher Community//ZH-TW
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hsc-ai-community-2026-session-4@et57125712-hub.github.io
+DTSTAMP:20261015T081829Z
+DTSTART:20261021T045000Z
+DTEND:20261021T063500Z
+SUMMARY:教師專業成長社群｜第4場｜AI輔助解剖生理學教學
+ 之應用經驗分享與修正
+LOCATION:C210教室
+DESCRIPTION:AI賦能：優化教學設計與創新教學應用社群\n社
+ 群成員組內實作分享，交流教材、簡報及複習資源初稿
+ ，並依同儕建議修正。請攜帶筆電與可供分享的教學資
+ 料。\n時間：第5–6節，12:50–14:35（臺灣時間）。
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:hsc-ai-community-2026-session-5@et57125712-hub.github.io
+DTSTAMP:20261015T081829Z
+DTSTART:20261028T045000Z
+DTEND:20261028T063500Z
+SUMMARY:教師專業成長社群｜第5場｜AI輔助教學成果發表與
+ 教學應用討論
+LOCATION:C210教室
+DESCRIPTION:AI賦能：優化教學設計與創新教學應用社群\n社
+ 群成員組內成果發表，每位成員至少分享1份修正後的教
+ 學成果，並交流教學應用與後續優化方向。請攜帶筆電
+ 與修正後的教學成果。\n時間：第5–6節，12:50–14:35（臺
+ 灣時間）。
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
